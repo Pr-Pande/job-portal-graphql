@@ -1,0 +1,43 @@
+// view all companies
+
+query {
+  ViewAllCompanies {
+    id
+    name
+    location
+  }
+}
+
+// create company
+
+mutation CreateCompany($input: NewCompany!) {
+  createNewCompany(input: $input) {
+    id
+    name
+    location
+    salary
+  }
+}
+{
+  "input": {
+    "name": "Example Company",
+    "location": "Example Location"
+  }
+}
+
+// user signup
+
+mutation SignUp($input: NewUser!) {
+  SignUp(input: $input) {
+    id
+    name
+    email
+  }
+}
+{
+  "input": {
+    "name": "Vikalp",
+    "email": "vikalp@gmail.com",
+    "password": "pass123"
+  }
+}
